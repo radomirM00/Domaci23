@@ -29,6 +29,7 @@ public class Base {
         Actions actions = new Actions(driver);
         actions.moveToElement(link);
         link.click();
+
     }
 
     public static List<WebElement> links(String path){
