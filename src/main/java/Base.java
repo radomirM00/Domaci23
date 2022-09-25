@@ -29,7 +29,6 @@ public class Base {
         Actions actions = new Actions(driver);
         actions.moveToElement(link);
         link.click();
-
     }
 
     public static List<WebElement> links(String path){
@@ -37,12 +36,13 @@ public class Base {
         return list;
     }
 
-    public static WebElement filterLinks(List<WebElement> links,String href) {
+    public static WebElement findLink(List<WebElement> links,String href) {
 
         WebElement link = null;
         for (WebElement we : links) {
             if (we.getAttribute("href").equals(href)) {
                 link = we;
+                break;
             }
         }
         return link;
